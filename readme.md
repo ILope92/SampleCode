@@ -77,10 +77,9 @@ or
 ```bash
 ~ python backend/utils/migrate --pg-url postgresql://admin:admin@0.0.0.0:5432/namedb upgrade head
 ```
-
+<hr>
 <a name="dev"></a>
 ### 3. Подготовка к разработке
-<hr>
 
 ### Linux
 ```bash
