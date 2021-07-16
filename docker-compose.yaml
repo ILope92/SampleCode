@@ -1,0 +1,30 @@
+version: '3'
+services:
+    db:
+        image: postgres:11.4-alpine
+        container_name: notion-database
+        ports: 
+            - 5432:5432
+        volumes:
+            - /var/lib/postgresql/data/pgdata
+        environment:
+            POSTGRES_USER: admin
+            POSTGRES_PASSWORD: admin
+            POSTGRES_DB: postgresdb
+            PGDATA: /var/lib/postgresql/data/pgdata
+        restart: always
+    app:
+        container_name: notion-application
+        build: .
+        extra_hosts:
+            - "somehost:127.0.0.1"
+        command: uvicorn main:app --host 0.0.0.0 --port 8000
+        depends_on:
+            - db
+        env_file:
+            - .env.backend
+        links:
+            - db
+        ports:
+            - "3000:8000"
+        restart: always
