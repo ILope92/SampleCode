@@ -1,5 +1,5 @@
 # Sample code
-[![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](#License)
+[![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/ILope92/SampleCode/blob/master/LICENSE)
 
 Проект подразумевает под собой некоторый функционал, и основан на предпочтениях в функционале потенциальных работадателей (Тестовых заданий / задач фриланса). Возможны дополнения в функционале.
 ## Оглавление
