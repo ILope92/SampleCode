@@ -1,4 +1,3 @@
-# from integrations.csv_parse import AddCSV
 import os
 import time
 import asyncio
@@ -12,7 +11,6 @@ class ModifiedData:
 
     @classmethod
     async def search(cls):
-        print("start search")
         for root, dirs, files in os.walk(cls.__path_data__):
             for file in files:
                 if file.endswith(".csv"):
