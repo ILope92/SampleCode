@@ -1,5 +1,5 @@
 import pandas as pd
-from backend.database.models.documents import Documents
+from backend.database.models.models import Documents
 from backend.database.crud import CRUD_DOC
 from datetime import datetime
 

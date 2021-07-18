@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from backend.core.workers import ModifiedData
+from backend.core.workers import ModifiedData, EmailSends
 from backend.api.routes import api_router
 import asyncio
 from backend.core.middlewares import exception_handlers
@@ -16,3 +16,4 @@ app.include_router(api_router, prefix="/api")
 
 loop = asyncio.get_event_loop()
 loop.create_task(ModifiedData.search())
+# loop.create_task(EmailSends.wait_email())

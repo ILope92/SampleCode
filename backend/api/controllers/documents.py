@@ -9,6 +9,7 @@ from backend.schemas.documents import (
 from backend.database.crud import CRUD_DOC
 from fastapi.exceptions import HTTPException
 from fastapi import status
+from backend.api.responses_err import RESPONSES
 
 router = APIRouter()
 
@@ -23,7 +24,7 @@ async def find_post(data: RequestFindTextSchema = Body(...)):
 @router.post(
     "/delete_post/",
     response_model=DeletePostSchema,
-    responses={status.HTTP_400_BAD_REQUEST: {"model": ErrorSchema}},
+    responses=RESPONSES,
 )
 async def delete_post(data: DeletePostSchema = Body(...)):
     result = await CRUD_DOC.delete_id(data.id)

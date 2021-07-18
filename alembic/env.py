@@ -3,8 +3,7 @@ from logging.config import fileConfig
 
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
-from sqlalchemy.ext.asyncio import AsyncEngine
-from backend.database.models.base import Base
+from backend.database.models.models import Base
 
 from alembic import context
 from os import getenv
