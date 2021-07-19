@@ -9,7 +9,7 @@
     - [Регистрация пользователя](#registration)
     - [Возможности](#opportunities)
 - [Развернуть приложение](#deploy)
-    - [Docker-compose](#docker)
+    - [Docker-compose](#deploy)
     - [Запуск проекта](#start)
     - [Миграция Alembic](#alembic)
 - [Подготовка к разработке](#dev)
@@ -62,9 +62,9 @@
 
 ## 2. Развернуть приложение
 
+<a name="deploy"></a>
 
 ### 2.1 Docker-compose
-<a name="deploy"></a>
 
 Сборка проекта внутри Docker контейнера
 ```bash
