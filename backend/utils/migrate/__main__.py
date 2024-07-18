@@ -16,7 +16,7 @@ __base_path__ = f"{BASE_DIR_ALEMBIC}\\alembic\\"
 
 def config_alembic(cmd_opts: Union[Namespace, SimpleNamespace]) -> Config:
     config = Config(file_=cmd_opts.config, ini_section=cmd_opts.name, cmd_opts=cmd_opts)
-    print(__base_path__)
+
     config.set_main_option("script_location", __base_path__)
     if cmd_opts.pg_url:
         config.set_main_option("sqlalchemy.url", cmd_opts.pg_url)
@@ -31,7 +31,7 @@ def main():
     POSTGRES_DATABASE_URL = dotenv_values(".env.backend")["DATABASE_URL"]
     alembic = CommandLine()
     alembic.parser.formatter_class = argparse.ArgumentDefaultsHelpFormatter
-    print(POSTGRES_DATABASE_URL)
+
     alembic.parser.add_argument(
         "--pg-url",
         default=POSTGRES_DATABASE_URL,
